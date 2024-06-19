@@ -2,26 +2,34 @@ import { Text, StyleSheet, Image, View, Alert, Pressable } from 'react-native'
 import { Link } from 'expo-router';
 
 
-export default function Tab() {
+export default function Home() {
   return (
     <View style={styles.container}>
 
-      <Link href="/profile" asChild>
-        <Pressable style={styles.profileBox}>
-          <Image source={require('../../../assets/images/userIcon.png')} height={10} />
-          <Text style={styles.title}>Tabata Zinco</Text>
-        </Pressable>
-      </Link>
+      <View style={styles.article}>
+        <Text style={styles.text}>
+          Você esta conectado como:
+        </Text>
+
+        <Link href="/profile" asChild>
+          <Pressable style={styles.profileBox}>
+            <Image source={require('../../../assets/images/userIcon1x.png')} />
+            <Text>
+              Tabatazanco@gmail.com
+            </Text>
+          </Pressable>
+        </Link>
+      </View>
 
       <View style={styles.main}>
-        <Text style={styles.t2}>Precisa de ajuda para resolver algum problema técnico?</Text>
+        <Text style={styles.t1}>Precisa de ajuda para resolver algum problema técnico?</Text>
 
 
         <Pressable
           style={styles.button}
           onPress={() => Alert.alert('Desenvolvimento 🛠️', 'Estamos em trabalhando para adicionar essa funcionalide!')}
         >
-          <Text style={styles.text}>
+          <Text style={styles.t2}>
             Chamar iHelp!
           </Text>
         </Pressable>
@@ -36,81 +44,61 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    gap: 250
+    gap: 150
+  },
+
+  article: {
+    display: 'flex',
+    marginTop: 40,
+    alignItems: 'center',
+    gap: 10
   },
 
   profileBox: {
-    width: 340,
-    height: 70,
-    borderRadius: 8,
-    backgroundColor: '#F2F2F2',
-    alignItems: 'center',
     display: 'flex',
-    flexDirection: 'row',
-    alignContent: 'flex-start',
-    paddingLeft: 15,
-    gap: 30,
-    marginTop: 60,
-
-    shadowColor: "#000000",
-    shadowOffset: {
-      width: 0,
-      height: 6,
-    },
-    shadowOpacity: 0.21,
-    shadowRadius: 6.65,
-    elevation: 5
-  },
-
-  title: {
-    fontSize: 28,
-    letterSpacing: 0.25,
-  },
-
-  text: {
-    fontSize: 18,
-    lineHeight: 21,
-    fontWeight: 'bold',
-    letterSpacing: 0.25,
-    color: 'white',
-  },
-
-  button: {
     alignItems: 'center',
-    justifyContent: 'center',
-    paddingVertical: 12,
-    paddingHorizontal: 32,
-    borderRadius: 12,
-    backgroundColor: '#0065FF',
-    alignSelf: 'center',
-    height: 50,
-    width: 300,
+    flexDirection: 'row',
+    width: 220,
+    padding: 5,
+    paddingLeft: 8,
+    gap: 10,
+    borderRadius: 16,
+    fontSize: 10,
 
-    shadowColor: "#000000",
-    shadowOffset: {
-      width: 0,
-      height: 6,
-    },
-    shadowOpacity: 0.98,
-    shadowRadius: 6.65,
-    elevation: 5
+    backgroundColor: '#f1f1f1'
+  },
+  text: {
+    fontSize: 13
+  },
+  t1: {
+    fontSize: 14,
+    alignSelf: 'center',
+    textAlign: 'center'
+  },
+
+  t2: {
+    fontSize: 18,
+    alignSelf: 'center',
+    textAlign: 'center',
+    color: 'white',
+    letterSpacing: 0.50
   },
 
   main: {
     display: 'flex',
+    width: 280,
     gap: 30,
+    alignItems: 'center',
+  },
+  button: {
+    width: 200,
+    height: 200,
+    borderRadius: 800,
 
-    alignSelf: 'center',
+    alignItems: "center",
     justifyContent: 'center',
-    alignContent: 'center',
-    width: 400
-  },
 
-  t2: {
-    fontSize: 24,
-    letterSpacing: 0.25,
-    color: 'black',
-    alignSelf: 'center',
-    textAlign: 'center'
-  },
+    backgroundColor: "#0065FF",
+
+  }
 });
