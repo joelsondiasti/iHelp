@@ -1,5 +1,5 @@
 import { AntDesign, Feather, FontAwesome5, Ionicons } from '@expo/vector-icons'
-import { Tabs } from 'expo-router';
+import { Stack, Tabs } from 'expo-router';
 
 export default function TabLayout() {
      return (
@@ -57,6 +57,15 @@ export default function TabLayout() {
                               justifyContent: 'center',
                               paddingTop: 10
                          }
+                    }}
+               />
+
+               <Tabs.Screen
+                    name="profile"
+                    options={{
+                        headerShown: false
+                         
+                         
                     }}
                />
           </Tabs>
