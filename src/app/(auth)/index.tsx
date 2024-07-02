@@ -82,7 +82,7 @@ export default function Login() {
 }
 
 const styles = StyleSheet.create({
-     container: { flex: 1, width: "80%", alignSelf: 'center', alignItems: 'center', justifyContent: 'space-around' },
+     container: { flex: 1, width: "90%", alignSelf: 'center', alignItems: 'center', justifyContent: 'space-around' },
      logins: { width: "100%", height: 350, gap: 10 },
      img: { width: 250, marginTop: 100, resizeMode: 'contain', }
 })
