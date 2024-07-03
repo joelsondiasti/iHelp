@@ -5,7 +5,7 @@
   "scripts": {
     "start": "expo start",
     "reset-project": "node ./scripts/reset-project.js",
-    "android": "expo start --android",
+    "android": "expo start --localhost --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
     "test": "jest --watchAll",
@@ -17,6 +17,7 @@
   "dependencies": {
     "@clerk/clerk-expo": "^1.2.2",
     "@expo/vector-icons": "^14.0.0",
+    "@paralleldrive/cuid2": "^2.2.2",
     "@prisma/client": "^5.16.1",
     "@react-navigation/native": "^6.0.2",
     "autoprefixer": "^10.4.19",
